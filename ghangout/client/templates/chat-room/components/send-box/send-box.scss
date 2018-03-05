@@ -1,0 +1,30 @@
+.send-container {
+  position:absolute;
+  width:100%;
+  height:50px;
+  background-color: #EEEEEE;
+  bottom:0;
+  border-top:1px solid grey;
+}
+
+.send-wrapper {
+  position:absolute;
+  left:2%;
+  right:2%;
+  top:3px;
+  bottom:3px;
+}
+
+.send-message-container {
+  position:relative;
+  width:80%;
+  height:100%;
+  float:left;
+}
+
+.send-message-button-container {
+  position:relative;
+  margin-left:2%;
+  height:100%;
+  float:left;
+}

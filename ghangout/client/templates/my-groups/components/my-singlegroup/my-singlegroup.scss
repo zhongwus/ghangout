@@ -1,0 +1,32 @@
+.my-groups-single-group-row {
+  height:80px;
+}
+
+.list-to-chat-arrow {
+  float:right;
+}
+
+.my-groups-single-item {
+  -webkit-transition:left 0.5s;
+  transition: left 0.5s;
+  left:0;
+}
+
+.my-groups-delete-button {
+  position:absolute;
+  left:0;
+  display:none !important;
+  opacity: 0;
+  height:50px !important;
+  width:50px !important;
+
+}
+
+.move-right {
+  left:30px;
+}
+
+.animite-show {
+  display:block !important;
+  opacity: 1;
+}

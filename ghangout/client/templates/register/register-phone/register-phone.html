@@ -1,0 +1,73 @@
+<template name="registerPhone">
+	<div class="container register-container">
+
+		<div class="bar bar-header bar-stable">
+			<button class="button button-icon icon ion-ios-close-empty register-close-button"></button>
+			<h2 class='title'>Register</h2>
+		</div>
+
+		<div class="ui grid container">
+			<div class="row register-mobile-row">
+				<div class="eleven wide column zero-padding">
+					<div class="ui fluid input">
+						<input class="normal-height-input" type="number" name="phone" placeholder="phone number">
+					</div>
+				</div>
+
+				<div class="five wide column right-zero-padding">
+					<div class="ui fluid button send-verification-button">
+						{{#if verified}}
+							Verified
+						{{else}}
+							{{getCountdown}}
+						{{/if}}
+					</div>
+				</div>
+			</div>
+
+			{{#if code_sent}}
+			<div class="one column centered row register-confirm-row">
+				<div class="column">
+					<div class="ui grid">
+						<div class="four wide column left-zero-padding">
+							<div class="ui fluid input">
+								<input class="normal-height-input" type="phone" name="verification_code">
+							</div>
+						</div>
+
+						<div class="right floated five wide column right-zero-padding">
+							<div class="ui fluid button code-confirm-button">
+								Confirm
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{/if}}
+
+			<div class="one column row register-password-row">
+				<div class="column zero-padding">
+					<div class="ui fluid input">
+						<input class="normal-height-input" type="password" name="password" placeholder="password">
+					</div>
+				</div>
+			</div>
+
+			<div class="one column centered row">
+				<div class="column">
+					<button class="ui fluid button register-button disabled">
+						Register
+					</button>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="sixteen wide column center aligned">
+						<a href="{{pathFor route='registerEmail'}}">Register via email</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</template>

@@ -1,0 +1,109 @@
+<template name="addGroup">
+  <div class="container add-group-container">
+    <div class="bar bar-header bar-dark">
+      <!--button class="button button-icon icon ion-ios-arrow-left back-button"></button-->
+      <h1 class="title">Add Group</h1>
+      <button class="button button-icon icon ion-ios-close-empty close-button"></button>
+    </div>
+
+    <div class="add-group-input-section">
+      <div class="list add-group-list">
+
+        <div class="item">
+          <textarea class="add-group-content" name="add-content" rows="3" placeholder="What's in your mind?"></textarea>
+        </div>
+
+        <div class="item item-input add-group-item list-item-bottom-border item-select">
+          <div class="input-label">
+            Maximum number of people:
+          </div>
+          <select name="add-size">
+            <option>1</option>
+            <option>2</option>
+            <option selected>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+          </select>
+        </div>
+
+        <div class="item item-input add-group-item list-item-bottom-border item-select">
+          <div class="input-label">
+            Activity Category:
+          </div>
+          <select class="add-group-select" name="add-category">
+            <option value="food" selected>Food</option>
+            <option value="party">Party</option>
+            <option value="movie">Movie</option>
+            <option value="chill">Chill</option>
+            <option value="gym">Gym</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="item item-input add-group-item list-item-bottom-border">
+          <span class="input-label">Location:</span>
+          <input type="text" name="location">
+        </div>
+
+        <div class="item add-group-item">
+          <div class="ui fluid button add-group-submit-button">
+            Submit
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--div class="scroll-container">
+      <div class="wrapper-with-header">
+        <div class="ui container grid">
+          <div class="one column row">
+            <textarea class="add-group-content" name="add-content" rows="3" placeholder="What's in your mind?"></textarea>
+            <div class="sixteen wide column">
+              <input type="text" name="add-content" placeholder="contents">
+              <input type="text" name="add-size" placeholder="size">
+              <select id="add-category">
+                <option value="food" selected>Food</option>
+                <option value="party">Party</option>
+                <option value="movie">Movie</option>
+                <option value="chill">Chill</option>
+                <option value="gym">Gym</option>
+                <option value="other">Other</option>
+              </select>
+              <input type="text" name="location" placeholder="location">
+              <button type="button" class="submit-button">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div-->
+  </div>
+
+</template>

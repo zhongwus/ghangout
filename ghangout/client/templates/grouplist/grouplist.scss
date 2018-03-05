@@ -1,0 +1,14 @@
+.grouplist-subheader .grouplist-subheader-item {
+  border:none;
+  vertical-align: middle;
+  display:inline;
+}
+
+.grouplist-subheader-item {
+  opacity: 1 !important;
+  font-size:0.8rem !important;
+}
+
+.grouplist-subheader-item.active {
+  color:#2980b9 !important;
+}

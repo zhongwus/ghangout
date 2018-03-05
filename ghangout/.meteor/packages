@@ -1,0 +1,40 @@
+# Meteor packages used by this project, one per line.
+# Check this file (and the other files in this directory) into your repository.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+insecure
+iron:router
+jquery
+underscore
+meteorhacks:async
+meteoric:ionic-sass
+meteoric:ionic
+fourseven:scss
+aldeed:autoform
+aldeed:collection2
+houston:admin
+accounts-password
+alanning:roles
+pcel:loading
+email
+flyandi:reactive-countdown
+abhiaiyer:meteor-twilio
+u2622:persistent-session
+meteoric:ionicons-sass
+semantic:ui
+flemay:less-autoprefixer
+jeremy:geocomplete
+aldeed:geocoder
+mdg:geolocation
+check
+force-ssl
+mdg:camera
+ccorcos:transitioner
+velocityjs:velocityjs
+percolate:velocityjs
+fastclick
+meteorhacks:fast-render
+momentjs:moment

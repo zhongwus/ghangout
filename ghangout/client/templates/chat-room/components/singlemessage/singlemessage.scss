@@ -1,0 +1,60 @@
+
+.bubble {
+  background-color:white;
+
+	border: solid 1px rbga(0,0,0,0.5);
+	/* vendor rules */
+	border-radius: 20px;
+	/* vendor rules */
+	/* vendor rules */
+	box-sizing: border-box;
+	clear: both;
+	float: left;
+	margin-bottom: 20px;
+	padding: 8px 10px;
+	position: relative;
+	width: auto;
+	max-width: 100%;
+	word-wrap: break-word;
+}
+
+.bubble:before, .bubble:after {
+	border-radius: 20px / 10px;
+	content: '';
+	display: block;
+	position: absolute;
+}
+
+.bubble:before {
+	border: 10px solid transparent;
+	border-bottom-color: white;
+	bottom: 0;
+	left: -7px;
+	z-index: -2;
+}
+
+.bubble:after {
+	border: 8px solid transparent;
+	border-bottom-color: white;
+	bottom: 1px;
+	left: -5px;
+}
+
+.bubble--alt {
+  background-color:#B2EBF2;
+	float: right;
+}
+
+.bubble--alt:before {
+	border-bottom-color: white;
+	border-radius: 20px / 10px;
+	left: auto;
+	right: -7px;
+}
+
+.bubble--alt:after {
+	border-bottom-color: #B2EBF2;
+	border-radius: 20px / 10px;
+	left: auto;
+	right: -5px;
+}

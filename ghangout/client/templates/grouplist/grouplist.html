@@ -1,0 +1,48 @@
+<template name="grouplist">
+	<div class="container grouplist-container">
+		<div class="bar bar-header bar-dark">
+			<button class="button button-icon icon ion-navicon menu-toggle" onclick="Router.go('completeProfile');"></button>
+			<h1 class="title">Hangouts</h1>
+			<button class="button button-icon icon ion-ios-plus-empty grouplist-add-button"></button>
+		</div>
+
+		<div class="bar bar-subheader">
+			<div class="center-table">
+				<div class="ui horizontal list grouplist-subheader">
+					<button data-group="all" class="item button button-clear grouplist-subheader-item">
+						All
+					</button>
+					<button data-group="food" class="item button button-clear grouplist-subheader-item">
+						Food
+					</button>
+					<button data-group="movie" class="item button button-clear grouplist-subheader-item">
+						Movie
+					</button>
+					<button data-group="party" class="item button button-clear grouplist-subheader-item">
+						Party
+					</button>
+					<button data-group="gym" class="item button button-clear grouplist-subheader-item">
+						Gym
+					</button>
+					<button data-group="chill" class="item button button-clear grouplist-subheader-item">
+						Chill
+					</button>
+					<button data-group="other" class="item button button-clear grouplist-subheader-item">
+						Other
+					</button>
+				</div>
+			</div>
+		</div>
+
+			<div class="scroll-container">
+				<div class="wrapper-with-subheader">
+					<div class="ui container grid" style="margin:0 !important;">
+						{{#each groups}}
+							{{> singlegroup}}
+						{{/each}}
+					</div>
+					<div class='extra-normal'></div>
+				</div>
+			</div>
+	</div>
+</template>

@@ -1,0 +1,34 @@
+<template name="chatRoom">
+
+  <div class="container chat-room-container has-pusher">
+    <div class="bar bar-header bar-dark">
+      <button class="button button-icon icon ion-ios-arrow-left close-button"></button>
+      <h1 class="title">chatroom</h1>
+      <div class="buttons">
+        {{#if isOwner}}
+        {{else}}
+          {{#if inGroup}}
+            <button class="button disabled button-outline">Reserved!</button>
+          {{else}}
+            <button class="button button-outline chat-room-confirm-button">Reserve</button>
+          {{/if}}
+        {{/if}}
+        <button class="button button-icon icon ion-navicon chat-room-sidebar"></button>
+      </div>
+    </div>
+
+    <div class="scroll-container all-message-container">
+      <div class="wrapper-with-header">
+        <div class="ui container grid">
+          {{#each messages}}
+            {{> singleMessage}}
+          {{/each}}
+        </div>
+        <div class='extra-large'></div>
+      </div>
+    </div>
+
+    {{> sendBox}}
+
+  </div>
+</template>

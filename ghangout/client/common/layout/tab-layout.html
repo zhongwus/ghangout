@@ -1,0 +1,84 @@
+<template name="tabLayout">
+  <div class="ui right vertical inverted sidebar menu">
+    <div class="ui container grid sidebar-container">
+      <div class="one column row">
+        <div class="center aligned column">
+          <h3 class='ui inverted header'>Members</h3>
+        </div>
+      </div>
+
+      {{#if isOwner}}
+        {{#each groupMember}}
+        <div class="row sidebar-row" data-user="{{_id}}">
+          <div class="two wide column right-zero-padding">
+            {{#if CheckInGroup myGroupsId}}
+            <i class='icon checkmark vertical-center green'></i>
+            {{/if}}
+          </div>
+          <div class="three wide column zero-padding">
+            <img src="{{profile.avatar}}" class='avatar-small rounded vertical-center' alt="" />
+          </div>
+          <div class="seven wide column zero-padding">
+            <div class="sidebar-name vertical-center">
+              {{profile.nickName}}
+            </div>
+          </div>
+
+          <div class="four wide column zero-padding">
+            {{#if checkMe _id}}
+              <button class='button button-clear'></button>
+            {{else}}
+              <button class='button button-clear icon ion-ios-close-outline sidebar-remove-button'></button>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+      {{else}}
+      {{#each groupMember}}
+      <div class="row sidebar-row">
+        <div class="two wide column right-zero-padding">
+          {{#if CheckInGroup myGroupsId}}
+          <i class='icon checkmark vertical-center green'></i>
+          {{/if}}
+        </div>
+        <div class="three wide column zero-padding">
+          <img src="{{profile.avatar}}" class='avatar-small rounded vertical-center' alt="" />
+        </div>
+        <div class="seven wide column zero-padding">
+          <div class="sidebar-name vertical-center">
+            {{profile.nickName}}
+          </div>
+        </div>
+
+        <div class="four wide column zero-padding">
+          {{#if checkMe _id}}
+            <button class='button button-clear'></button>
+          {{else}}
+            <button class="button button-clear icon ion-ios-plus-outline sidebar-add-button"></button>
+          {{/if}}
+        </div>
+      </div>
+      {{/each}}
+      {{/if}}
+    </div>
+  </div>
+
+  <div class="pusher" style="height:100%;">
+
+
+      {{#transitioner}}
+            {{> yield}}
+      {{/transitioner}}
+
+      {{#if inChatRoom}}
+      {{else}}
+        {{#ionTabs style="ios"}}
+          {{> ionTab title="Discover" path="grouplist" groupCategory=category icon="ios-navigate-outline"}}
+          {{> ionTab title="Groups" path="myGroups" icon="ios-chatboxes-outline"}}
+          {{> ionTab title="Friends" path="employee" icon="ios-people-outline"}}
+          {{> ionTab title="Me" path="earning" icon="ios-person-outline"}}
+        {{/ionTabs}}
+      {{/if}}
+
+  </div>
+</template>

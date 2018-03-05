@@ -1,0 +1,24 @@
+<template name='myGroups'>
+  <div class="container my-groups-container">
+		<div class="bar bar-header bar-dark">
+      {{#if editMode}}
+        <button class='button button-clear my-groups-done-button'>Done</button>
+      {{else}}
+        <button class='button button-clear my-groups-edit-button'>Edit</button>
+      {{/if}}
+			<h1 class="title">My Groups</h1>
+			<button class="button button-icon icon ion-ios-plus-empty my-groups-add-button"></button>
+		</div>
+
+			<div class="scroll-container">
+				<div class="wrapper-with-header">
+					<div class="ui container grid" style="margin:0 !important;">
+						{{#each groups}}
+							{{> mySingleGroup}}
+						{{/each}}
+					</div>
+					<div class='extra-normal'></div>
+				</div>
+			</div>
+	</div>
+</template>

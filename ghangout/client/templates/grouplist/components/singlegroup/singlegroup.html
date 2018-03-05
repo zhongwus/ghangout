@@ -1,0 +1,37 @@
+<template name="singlegroup">
+
+	<div class="single-group-row row small-top-bottom-padding {{#if GroupNotClickable isFull _id}}disabled-item{{/if}}" data-owner="{{owner_id}}" data-id={{_id}} data-category={{category}}>
+		<div class="three wide column most-left-padding">
+			<img src="{{owner_profile.avatar}}" class="avatar-normal rounded vertical-center"/>
+		</div>
+		<div class="eleven wide column right-zero-padding">
+			<p class='vertical-center'>
+				{{content}}
+			</p>
+		</div>
+		<div class="two wide column zero-padding">
+			{{#if GroupNotClickable isFull _id}}
+
+			{{else}}
+				<a class="button button-icon icon ion-ios-arrow-right vertical-center list-to-chat-arrow"></a>
+			{{/if}}
+		</div>
+	</div>
+
+	<div class="single-group-extra-row row small-top-bottom-padding {{#if GroupNotClickable isFull _id}}disabled-item{{/if}}" style="border-bottom:1px solid grey">
+		<div class="five wide column most-left-padding">
+			<p>
+				{{getGroupDistance latLng}} miles
+			</p>
+		</div>
+		<div class="four wide column zero-padding">
+			<i class='icon {{#if isFull}}red{{/if}} users'></i>
+			{{getGroupLiveNumber participants_ids temp_participants_ids}}/{{capacity}}
+		</div>
+		<div class="six zero-padding">
+			<i class="location arrow icon"></i>
+			show location
+		</div>
+	</div>
+
+</template>

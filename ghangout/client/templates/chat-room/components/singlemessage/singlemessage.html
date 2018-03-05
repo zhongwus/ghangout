@@ -1,0 +1,25 @@
+<template name="singleMessage">
+  {{#if checkMe sender_id}}
+    <div class="row">
+      <div class="thirteen wide column zero-padding">
+        <div class="bubble bubble--alt">
+          {{content}}
+        </div>
+      </div>
+      <div class="three wide column zero-padding">
+        <img src={{sender_avatar}} class="avatar-normal rounded bottom-right" alt="" />
+      </div>
+    </div>
+  {{else}}
+    <div class="row">
+      <div class="three wide column zero-padding">
+        <img src={{sender_avatar}} class="avatar-normal rounded vertical-bottom" alt="" />
+      </div>
+      <div class="thirteen wide column zero-padding">
+        <div class="bubble">
+          {{content}}
+        </div>
+      </div>
+    </div>
+  {{/if}}
+</template>

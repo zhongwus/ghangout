@@ -1,0 +1,60 @@
+<template name="completeProfile">
+  <div class="container complete-profile-container">
+
+    <div class="bar bar-header bar-dark">
+			<button class="button button-icon icon ion-ios-arrow-left logout-button"></button>
+			<h1 class="title">Profile</h1>
+			<button class="button button-clear cp-skip-button">Skip</button>
+		</div>
+
+    <div class="cp-avatar-section">
+      <div class="ui container grid cp-avatar-grid-container">
+        <div class="one column row">
+          <div class="column">
+            <img class='rounded avatar-large center-content cp-avatar' src="/images/default-avatar.jpg" id="cp-uploaded-image"/>
+          </div>
+          <div class="center aligned column cp-buttons-section">
+            <div class="ui buttons">
+              <div class="ui mini basic red button cp-take-photo-button">
+                Take a Photo
+              </div>
+              <div class="ui mini teal basic button cp-upload-photo-button">
+                From Library
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cp-input-section">
+      <div class="list cp-list">
+        <div class="item item-input cp-item list-item-bottom-border">
+          <span class="input-label">Username</span>
+          <input type="text" name="username">
+        </div>
+
+        <div class="item item-input cp-item list-item-bottom-border">
+          <span class="input-label">Birthday</span>
+          <input type="date" name="birthday">
+        </div>
+
+        <div class="item item-input cp-item list-item-bottom-border item-select">
+          <div class="input-label">
+            Sex
+          </div>
+          <select name="sex">
+            <option selected>Male</option>
+            <option>Female</option>
+          </select>
+        </div>
+
+        <div class="item cp-item">
+          <div class="ui fluid button cp-submit-button">
+            Submit
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

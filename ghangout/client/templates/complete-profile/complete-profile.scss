@@ -1,0 +1,42 @@
+.cp-avatar-section {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  background-color:#f2f2f2;
+}
+
+.cp-input-section {
+  position:absolute;
+  top:200px;
+  left:0;
+  width:100%;
+}
+
+.cp-avatar-grid-container {
+  margin-top:40px !important;
+}
+.cp-buttons-section {
+  padding-top:20px !important;
+}
+
+.cp-list {
+  padding-top:20px !important;
+}
+
+.cp-item {
+  background:transparent !important;
+  padding-left:0 !important;
+  margin-left:1em !important;
+  margin-right:1em !important;
+}
+.list-item-bottom-border {
+  border:1px solid #f2f2f2 !important;
+  border-top:none !important;
+  border-left:none !important;
+  border-right:none !important;
+}
+
+select[name='sex'] {
+  background:transparent !important;
+}
